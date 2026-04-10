@@ -1,0 +1,131 @@
+@use 'vars' as *;
+
+// Typography
+
+@mixin font-base(
+  $size: $font-size-base,
+  $weight: 400,
+  $line-height: $line-height-base,
+  $style: normal,
+  $family: $font-family-base
+) {
+  font-family: $family;
+  font-size: $size;
+  font-style: $style;
+  font-weight: $weight;
+  line-height: $line-height;
+}
+
+// SVG (Angular ::ng-deep)
+
+@mixin svg-stroke($color) {
+  &::ng-deep svg {
+    & path,
+    & circle {
+      fill: none;
+      stroke: $color;
+    }
+  }
+}
+
+@mixin svg-fill($color) {
+  &::ng-deep svg {
+    & path,
+    & circle {
+      fill: $color;
+      stroke: none;
+    }
+  }
+}
+
+@mixin svg-size($width, $height: $width) {
+  &::ng-deep svg {
+    width: $width;
+    height: $height;
+  }
+}
+
+@mixin svg-stroke-width($size) {
+  &::ng-deep svg {
+    & path,
+    & circle {
+      stroke-width: $size;
+    }
+  }
+}
+
+// SVG (без ::ng-deep — для host або нативних елементів)
+
+@mixin svg-stroke-raw($color) {
+  & svg {
+    & path,
+    & circle {
+      fill: none;
+      stroke: $color;
+    }
+  }
+}
+
+@mixin svg-fill-raw($color) {
+  & svg {
+    & path,
+    & circle {
+      fill: $color;
+      stroke: none;
+    }
+  }
+}
+
+@mixin svg-size-raw($width, $height: $width) {
+  & svg {
+    width: $width;
+    height: $height;
+  }
+}
+
+// Text truncation
+
+@mixin truncate($width: 100%) {
+  width: $width;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin truncate-max($max-width: 100%) {
+  max-width: $max-width;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin truncate-lines($lines, $max-width: 100%) {
+  display: -webkit-box;
+  max-width: $max-width;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: $lines;
+  -webkit-box-orient: vertical;
+}
+
+@mixin truncate-fluid {
+  display: block;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// Responsive
+
+@mixin breakpoint($bp) {
+  @media (max-width: $bp) {
+    @content;
+  }
+}
+
+@mixin breakpoint-min($bp) {
+  @media (min-width: $bp) {
+    @content;
+  }
+}
