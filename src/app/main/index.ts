@@ -1,2 +1,2 @@
 export { MainComponent } from './main.component';
-export { mainRoutes } from './main.routing';
+export { MAIN_ROUTES } from './main.routing';
