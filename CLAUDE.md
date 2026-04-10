@@ -9,7 +9,8 @@ Angular application (LumenFE) using SCSS and routing.
 - Angular Router for navigation
 
 ## Code Style
-- Use standalone components (Angular 17+ style)
+- Components are standalone by default (Angular 17+) — do not write `standalone: true` explicitly
+- Always use `ChangeDetectionStrategy.OnPush` on every component
 - Prefer `inject()` over constructor injection
 - Use `signal`/`computed` for reactive state where applicable
 - Filenames: kebab-case (e.g., `user-profile.component.ts`)
