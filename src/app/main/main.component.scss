@@ -1,0 +1,130 @@
+@use 'vars' as *;
+@use 'mixins' as *;
+
+:host {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  background: var(--color-bg-base);
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  width: 220px;
+  padding: $space-lg $space-md;
+  background: var(--sidebar-bg);
+  border-right: 1px solid var(--sidebar-border);
+  transition: $transition-smooth;
+
+  &__logo {
+    display: flex;
+    gap: $space-sm;
+    align-items: center;
+    margin-bottom: $space-xl;
+    padding: 0 $space-xs;
+  }
+
+  &__logo-icon {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    color: var(--color-accent);
+  }
+
+  &__logo-text {
+    @include font-base(18px, 600);
+
+    color: var(--color-text-primary);
+    letter-spacing: -0.02em;
+  }
+
+  &__nav {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  &__nav-item {
+    @include font-base($font-size-base, 500);
+
+    display: flex;
+    gap: $space-sm;
+    align-items: center;
+    padding: $space-sm $space-md;
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    border-radius: $radius-md;
+    transition: $transition-base;
+
+    &:hover:not(&--soon) {
+      color: var(--color-text-primary);
+      background: var(--color-bg-elevated);
+    }
+
+    &--active {
+      color: var(--color-accent);
+      background: var(--color-accent-subtle);
+
+      &:hover {
+        background: var(--color-accent-subtle);
+      }
+    }
+
+    &--soon {
+      cursor: default;
+      opacity: 0.35;
+    }
+  }
+
+  &__nav-icon {
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+  }
+
+  &__footer {
+    display: flex;
+    gap: $space-xs;
+    align-items: center;
+    padding-top: $space-md;
+    border-top: 1px solid var(--color-border-subtle);
+  }
+
+  &__footer-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    color: var(--color-text-secondary);
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    border-radius: $radius-md;
+    transition: $transition-base;
+
+    svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    &:hover {
+      color: var(--color-text-primary);
+      background: var(--color-bg-elevated);
+    }
+  }
+}
+
+.content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-width: 0;
+  overflow-y: auto;
+}

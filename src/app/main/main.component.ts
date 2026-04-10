@@ -1,10 +1,15 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
+
+import { ThemeService } from '@core/services';
 
 @Component({
   selector: 'app-main',
-  imports: [RouterOutlet],
-  template: `<router-outlet />`,
+  templateUrl: './main.component.html',
+  styleUrl: './main.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
+  imports: [RouterOutlet, RouterLink, RouterLinkActive],
 })
-export class MainComponent {}
+export class MainComponent {
+  protected readonly themeService = inject(ThemeService);
+}

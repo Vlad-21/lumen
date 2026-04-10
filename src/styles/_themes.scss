@@ -1,0 +1,69 @@
+[data-theme='dark'] {
+  // Backgrounds
+  --color-bg-base: #0f0f12;
+  --color-bg-surface: #16161c;
+  --color-bg-elevated: #1e1e26;
+  --color-bg-overlay: #252530;
+
+  // Text
+  --color-text-primary: #e8e8f0;
+  --color-text-secondary: #9090a8;
+  --color-text-muted: #555568;
+
+  // Borders
+  --color-border: #252530;
+  --color-border-subtle: #1e1e26;
+
+  // Accent (warm amber — Lumen)
+  --color-accent: #e8a845;
+  --color-accent-hover: #d49838;
+  --color-accent-subtle: rgb(232 168 69 / 12%);
+
+  // Status
+  --color-success: #36934c;
+  --color-error: #dd1c1c;
+  --color-warning: #f7901e;
+
+  // Sidebar
+  --sidebar-bg: #0c0c0f;
+  --sidebar-border: #1e1e26;
+
+  // Reader
+  --reader-bg: #111114;
+  --reader-text: #d8d8e8;
+}
+
+[data-theme='light'] {
+  // Backgrounds
+  --color-bg-base: #f5f4f0;
+  --color-bg-surface: #ffffff;
+  --color-bg-elevated: #eeede8;
+  --color-bg-overlay: #e4e3de;
+
+  // Text
+  --color-text-primary: #1a1a20;
+  --color-text-secondary: #50506a;
+  --color-text-muted: #90909a;
+
+  // Borders
+  --color-border: #e0dfd8;
+  --color-border-subtle: #eeedea;
+
+  // Accent
+  --color-accent: #c47820;
+  --color-accent-hover: #b06818;
+  --color-accent-subtle: rgb(196 120 32 / 10%);
+
+  // Status
+  --color-success: #26753b;
+  --color-error: #bf1616;
+  --color-warning: #dc5f43;
+
+  // Sidebar
+  --sidebar-bg: #eceae4;
+  --sidebar-border: #dddcd6;
+
+  // Reader
+  --reader-bg: #faf8f4;
+  --reader-text: #2a2a32;
+}

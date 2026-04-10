@@ -6,6 +6,17 @@ export const mainRoutes: Routes = [
   {
     path: '',
     component: MainComponent,
-    children: [],
+    children: [
+      {
+        path: '',
+        redirectTo: 'library',
+        pathMatch: 'full',
+      },
+      {
+        path: 'library',
+        loadComponent: () =>
+          import('../library/library.component').then((m) => m.LibraryComponent),
+      },
+    ],
   },
 ];
