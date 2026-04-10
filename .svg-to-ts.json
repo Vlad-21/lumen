@@ -1,0 +1,13 @@
+{
+  "verbose": true,
+  "srcFiles": ["./src/assets/icon/*.svg"],
+  "outputDirectory": "./src/app/icons",
+  "fileName": "lumen-icons",
+  "interfaceName": "LumenIcon",
+  "typeName": "lumenIcon",
+  "prefix": "lumenIcons",
+  "exportCompleteIconSet": true,
+  "svgoConfig": {
+    "plugins": ["cleanupAttrs"]
+  }
+}
