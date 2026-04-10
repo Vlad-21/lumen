@@ -1,12 +1,16 @@
 {
   "name": "lumen-fe",
   "version": "0.0.0",
+  "main": "electron/main.js",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "electron:dev": "NODE_ENV=development concurrently --kill-others \"ng serve\" \"wait-on http://localhost:4200 && electron .\"",
+    "electron:build": "ng build --configuration production && electron .",
+    "electron": "electron ."
   },
   "prettier": {
     "printWidth": 100,
@@ -37,12 +41,16 @@
     "@angular/cli": "^20.3.12",
     "@angular/compiler-cli": "^20.3.0",
     "@types/jasmine": "~5.1.0",
+    "concurrently": "^9.2.1",
+    "electron": "^41.2.0",
+    "electron-reload": "^2.0.0-alpha.1",
     "jasmine-core": "~5.9.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
-    "typescript": "~5.9.2"
+    "typescript": "~5.9.2",
+    "wait-on": "^9.0.5"
   }
 }
