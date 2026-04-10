@@ -16,6 +16,16 @@ Angular application (LumenFE) using SCSS and routing.
 - Filenames: kebab-case (e.g., `user-profile.component.ts`)
 - Keep components small and focused — one responsibility per component
 
+## Signal in Templates
+Always unwrap signals at the top of the template with `@let`, never call them inline:
+```html
+@let themeView = themeService.theme();
+@let booksView = books();
+
+<!-- use themeView, booksView — not themeService.theme() or books() -->
+```
+Naming convention: `signalNameView` for the unwrapped value.
+
 ## SCSS Conventions
 - Use BEM methodology for class naming
 - Define shared variables and mixins in `src/styles/`

@@ -1,3 +1,5 @@
+@let booksView = books();
+
 <div class="library">
   <header class="library__header">
     <h1 class="library__title">My Library</h1>
@@ -7,7 +9,7 @@
   </header>
 
   <div class="library__grid">
-    @for (book of books(); track book.id) {
+    @for (book of booksView; track book.id) {
       <div class="book-card">
         <div class="book-card__cover">
           <img [src]="book.cover" [alt]="book.title" />
