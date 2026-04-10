@@ -1,0 +1,56 @@
+{
+  // --- Formatting ---
+  // "editor.formatOnSave": true,
+  // "editor.defaultFormatter": "esbenp.prettier-vscode",
+  // "[typescript]": {
+  //   "editor.defaultFormatter": "esbenp.prettier-vscode"
+  // },
+  // "[html]": {
+  //   "editor.defaultFormatter": "esbenp.prettier-vscode"
+  // },
+  // "[scss]": {
+  //   "editor.defaultFormatter": "esbenp.prettier-vscode"
+  // },
+
+  // --- ESLint: fix imports on save ---
+  // "editor.codeActionsOnSave": {
+  //   "source.fixAll.eslint": "explicit"
+  // },
+  // "eslint.validate": ["typescript", "html"],
+
+  // --- TypeScript ---
+  // "typescript.preferences.importModuleSpecifier": "non-relative",
+  // "typescript.suggest.autoImports": true,
+  // "typescript.updateImportsOnFileMove.enabled": "always",
+
+  // --- Angular ---
+  // "angular.enable-strict-mode-prompt": false,
+
+  // --- WebStorm look & feel ---
+  // "workbench.colorTheme": "Darcula",
+  // "workbench.iconTheme": "vscode-jetbrains-icon-theme",
+  // "editor.fontFamily": "'JetBrains Mono', monospace",
+  // "editor.fontLigatures": true,
+  // "editor.fontSize": 13,
+  // "editor.lineHeight": 1.6,
+
+  // --- Editor UX ---
+  // "editor.tabSize": 2,
+  // "editor.rulers": [100],
+  // "editor.bracketPairColorization.enabled": true,
+  // "editor.guides.bracketPairs": true,
+  // "editor.inlayHints.enabled": "on",
+  // "editor.suggest.preview": true,
+
+  // --- Files ---
+  // "files.autoSave": "onFocusChange",
+  // "files.exclude": {
+  //   "**/.git": true,
+  //   "**/node_modules": true,
+  //   "dist": true
+  // },
+  // "search.exclude": {
+  //   "**/node_modules": true,
+  //   "**/dist": true
+  // }
+}

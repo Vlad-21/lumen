@@ -1,22 +1,26 @@
 import { Routes } from '@angular/router';
 
 import { MainComponent } from './main.component';
+import {appRoutes} from '@core/constants';
 
-export const mainRoutes: Routes = [
+const children: Routes = [
+  {
+    path: appRoutes.library,
+    loadComponent: () =>
+      import('@main/pages/library/library.component').then((m) => m.LibraryComponent),
+  },
+  {
+    path: '',
+    redirectTo: 'library',
+    pathMatch: 'full',
+  },
+];
+
+
+export const MAIN_ROUTES: Routes = [
   {
     path: '',
     component: MainComponent,
-    children: [
-      {
-        path: '',
-        redirectTo: 'library',
-        pathMatch: 'full',
-      },
-      {
-        path: 'library',
-        loadComponent: () =>
-          import('../library/library.component').then((m) => m.LibraryComponent),
-      },
-    ],
-  },
-];
+    children,
+  }
+]

@@ -49,7 +49,7 @@ module.exports = [
     },
     rules: {
       // --- Prettier ---
-      'prettier/prettier': ['error', { endOfLine: 'auto' }],
+      'prettier/prettier': 'error',
 
       // --- Angular ---
       '@angular-eslint/prefer-standalone': 'error',
@@ -191,7 +191,7 @@ module.exports = [
       prettier: prettierPlugin,
     },
     rules: {
-      'prettier/prettier': ['error', { printWidth: 80 }],
+      'prettier/prettier': 'error',
       '@angular-eslint/template/eqeqeq': 'error',
       '@angular-eslint/template/no-negated-async': 'error',
       '@angular-eslint/template/banana-in-box': 'error',

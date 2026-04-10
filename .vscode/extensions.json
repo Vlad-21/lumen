@@ -1,4 +1,18 @@
 {
-  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=827846
-  "recommendations": ["angular.ng-template"]
+  "recommendations": [
+    // Angular
+    // "angular.ng-template",
+
+    // Linting & formatting
+    // "dbaeumer.vscode-eslint",
+    // "esbenp.prettier-vscode",
+
+    // SCSS
+    // "mrmlnc.vscode-scss",
+
+    // WebStorm look & feel
+    // "rokoroku.vscode-theme-darcula",
+    // "chadalen.vscode-jetbrains-icon-theme",
+    // "isudox.vscode-jetbrains-keybindings"
+  ]
 }

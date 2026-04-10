@@ -11,5 +11,5 @@ import { ThemeService } from '@core/services';
   imports: [RouterOutlet, RouterLink, RouterLinkActive],
 })
 export class MainComponent {
-  protected readonly themeService = inject(ThemeService);
+  public readonly themeService = inject(ThemeService);
 }

@@ -1,5 +1,5 @@
-@use 'vars' as *;
-@use 'mixins' as *;
+@use '../../../../styles/vars' as *;
+@use '../../../../styles/mixins' as *;
 
 .library {
   padding: $space-xl;
