@@ -13,11 +13,6 @@ export class LumenIconsService {
   }
 
   public getIcon(iconName: string): string | undefined {
-    if (!this.registry.has(iconName)) {
-      console.warn(
-        `Icon "${iconName}" not found in registry. Did you add it via LumenIconsService.registerIcons()?`,
-      );
-    }
     return this.registry.get(iconName);
   }
 }
