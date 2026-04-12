@@ -14,7 +14,7 @@ import { LumenIconsService } from './lumen-icons.service';
 @Component({
   selector: 'app-icon',
   template: `<ng-content />`,
-  styles: [':host::ng-deep svg { display: flex; justify-content: center; align-items: center }'],
+  styles: [':host { display: block; } :host ::ng-deep svg { display: block; width: 100%; height: 100%; }'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class LumenIconComponent {

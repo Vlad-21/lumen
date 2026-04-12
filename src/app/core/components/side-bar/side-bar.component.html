@@ -1,0 +1,29 @@
+@let themeView = themeService.theme();
+
+<div class="sidebar__logo">
+  <app-icon class="sidebar__logo-icon" name="lumen_logo" />
+  <span class="sidebar__logo-text">Lumen</span>
+</div>
+
+<nav class="sidebar__nav">
+  <app-side-bar-item icon="library" label="Library" link="/library" />
+  <app-side-bar-item icon="discover" label="Discover" [soon]="true" />
+</nav>
+
+<div class="sidebar__footer">
+  <button
+    class="sidebar__footer-btn"
+    (click)="themeService.toggle()"
+    [title]="themeView === 'dark' ? 'Switch to light' : 'Switch to dark'"
+  >
+    @if (themeView === 'dark') {
+      <app-icon name="sun" />
+    } @else {
+      <app-icon name="moon" />
+    }
+  </button>
+
+  <a class="sidebar__footer-btn sidebar__footer-btn--soon" [attr.aria-disabled]="true" title="Settings">
+    <app-icon name="settings" />
+  </a>
+</div>

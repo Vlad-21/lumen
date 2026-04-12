@@ -1,0 +1,16 @@
+@let iconView = icon();
+@let labelView = label();
+@let linkView = link();
+@let soonView = soon();
+
+@if (linkView && !soonView) {
+  <a class="nav-item" [routerLink]="linkView" routerLinkActive="nav-item--active">
+    <app-icon class="nav-item__icon" [name]="iconView" />
+    <span>{{ labelView }}</span>
+  </a>
+} @else {
+  <span class="nav-item nav-item--soon" [attr.aria-disabled]="true">
+    <app-icon class="nav-item__icon" [name]="iconView" />
+    <span>{{ labelView }}</span>
+  </span>
+}

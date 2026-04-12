@@ -1,0 +1,43 @@
+@use 'vars' as *;
+@use 'mixins' as *;
+
+.nav-item {
+  @include font-base($font-size-base, 500);
+
+  display: flex;
+  gap: $space-sm;
+  align-items: center;
+  padding: $space-sm $space-md;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  border-radius: $radius-md;
+  transition: $transition-base;
+
+  &:hover:not(&--soon) {
+    color: var(--color-text-primary);
+    background: var(--color-bg-elevated);
+  }
+
+  &--active {
+    color: var(--color-accent);
+    background: var(--color-accent-subtle);
+
+    &:hover {
+      background: var(--color-accent-subtle);
+    }
+  }
+
+  &--soon {
+    cursor: default;
+    opacity: 0.35;
+  }
+
+  &__icon {
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+  }
+}

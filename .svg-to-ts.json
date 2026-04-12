@@ -1,7 +1,7 @@
 {
   "verbose": true,
   "srcFiles": ["./src/assets/icon/*.svg"],
-  "outputDirectory": "./src/app/icons",
+  "outputDirectory": "./src/app/core/components/icons",
   "fileName": "lumen-icons",
   "interfaceName": "LumenIcon",
   "typeName": "lumenIcon",
